@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="head-container">
+    <img id="logo" src="./images/logo.svg" alt="Spliter Logo">
+  </div>
+  <div class="main-container">
+    <div class="main-container__head">
+      <p class="bill title">Bill</p>
+      <span class="head__bill">
+        <i></i>
+        <input onchange="billValue(this.value)" placeholder="0" class="bill-input" type="number">
+      </span>
+    </div>
+    <div class="main-container__main">
+      <p id="select-tip" class="title">Select Tip %</p>
+      <button id="one" type="button" class="tip-percentage one">5%</button >
+      <button id="two" type="button" class="tip-percentage two">10%</button >
+      <button id="three" type="button" class="tip-percentage three">15%</button >
+      <button id="four" type="button" class="tip-percentage four">25%</button >
+      <button id="five" type="button" class="tip-percentage five">50%</button >
+      <input type="number" placeholder="Custom" class="custom-percentage six" onchange="valueTip(this.value)"></input>
+    </div>
+    <div class="main-container__footer">
+      <p class="title">Number of people</p>
+      <span class="footer__num-people">
+        <i></i>
+        <input onchange="numPeopleValue(this.value)" id="num-people" placeholder="0" type="number">
+      </span>
+      <button onclick="calculate()" type="button" class="footer__btnCalcular">CALCULATE</button>
+    </div>
+    <div class="footer__calculator">
+      <div class="calculator__tip-amount">
+        <span>
+          <h2 class="title title-calculator">Tip Amount</h2>
+          <p class="ph-calculator">/ person</p>
+        </span>
+        <h3 class="tip-amount__result result-calculator">$0.00</h3>
+      </div>
+      <div class="calculator__total">
+        <span>
+          <h2 class="title title-calculator">Total</h2>
+          <p class="ph-calculator">/ person</p>
+        </span>
+        <h3 class="total__result result-calculator">$0.00</h3>
+      </div>
+      <button class="btn-desactivated" type="button" id="reset-calculator" onclick="resetCalc()">RESET</button>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
